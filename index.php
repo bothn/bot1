@@ -21,15 +21,15 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
     $cmts= $pc["CMTS"]." ";
 }
   $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
- $msg=urlencode("<pre>*Informacion del Nodo* \n").
-      urlencode("<strong>Nodo:</strong> "  .$location."\n").
-      urlencode("<pre>NPA: "  .$x."\n").
-      urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."\n").
-      urlencode("<pre>Departamento: "  .$supervisor."\n").
-      urlencode("<pre>Ciudad: "  .$ciudad."\n").
-      urlencode("<pre>Colonia/Nodo: "  .$colonia."\n").
-      urlencode("<pre>Supervisor: "  .$supervisor."\n").
-      urlencode("<pre>CMTS: "  .$cmts."\n");
+ $msg=urlencode("<pre>Informacion del Nodo</pre> \n").
+      urlencode("Nodo: "  .$location."\n").
+      urlencode("NPA: "  .$x."\n").
+      urlencode("NPA (Avg 7 dias): "  .$npa_avg."\n").
+      urlencode("Departamento: "  .$supervisor."\n").
+      urlencode("Ciudad: "  .$ciudad."\n").
+      urlencode("Colonia/Nodo: "  .$colonia."\n").
+      urlencode("Supervisor: "  .$supervisor."\n").
+      urlencode("CMTS: "  .$cmts."\n");
  
  
  if (empty($x)) 
