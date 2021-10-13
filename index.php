@@ -35,6 +35,6 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
  if (empty($x)) 
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$noencontrado.'&parse_mode=markdown'); } 
     else 
-    {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=Monospaced'); } 
+    {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=MarkdownV2'); } 
 }
 ?>
