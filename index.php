@@ -16,7 +16,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
 }
   $noencontrado=urlencode(" no se encuentra el Nodo: ".$location);
  $msg=urlencode("*Informacion del Nodo* \n").
-      urlencode("*Node_id:*"  .$location);
+      urlencode("Nodo:"  .$location);
  
  
  if (empty($x)) 
