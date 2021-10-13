@@ -20,16 +20,16 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
     $supervisor= $pc["SUPERVISOR"]." ";
     $cmts= $pc["CMTS"]." ";
 }
-  $noencontrado=urlencode(" no se encuentra el Nodo: ".$location);
- $msg=urlencode("<pre>*Informacion del Nodo* </pre>\n").
-      urlencode("<pre>Nodo: "  .$location."</pre>\n").
-      urlencode("<pre>NPA: "  .$x."</pre>\n").
-      urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."</pre>\n").
-      urlencode("<pre>Departamento: "  .$supervisor."</pre>\n").
-      urlencode("<pre>Ciudad: "  .$ciudad."</pre>\n").
-      urlencode("<pre>Colonia/Nodo: "  .$colonia."</pre>\n").
-      urlencode("<pre>Supervisor: "  .$supervisor."</pre>\n").
-      urlencode("<pre>CMTS: "  .$cmts."</pre>\n");
+  $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
+ $msg=urlencode("<pre>*Informacion del Nodo* \n").
+      urlencode("<pre>Nodo: "  .$location."\n").
+      urlencode("<pre>NPA: "  .$x."\n").
+      urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."\n").
+      urlencode("<pre>Departamento: "  .$supervisor."\n").
+      urlencode("<pre>Ciudad: "  .$ciudad."\n").
+      urlencode("<pre>Colonia/Nodo: "  .$colonia."\n").
+      urlencode("<pre>Supervisor: "  .$supervisor."\n").
+      urlencode("<pre>CMTS: "  .$cmts."\n");
  
  
  if (empty($x)) 
