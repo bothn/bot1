@@ -23,7 +23,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
   $noencontrado=urlencode(" no se encuentra el Nodo: ".$location);
  $msg=urlencode("*Informacion del Nodo* \n").
       urlencode("Nodo: "  .$location."\n").
-      urlencode("NPA: "  .$npa."\n").
+      urlencode("NPA: "  .$x."\n").
       urlencode("NPA (Avg 7 dias): "  .$npa_avg."\n").
       urlencode("Departamento: "  .$supervisor."\n").
       urlencode("Ciudad: "  .$ciudad."\n").
@@ -35,6 +35,6 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
  if (empty($x)) 
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$noencontrado.'&parse_mode=markdown'); } 
     else 
-    {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=markdown'); } 
+    {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=Monospaced'); } 
 }
 ?>
