@@ -12,11 +12,19 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
  $emoji = "\xf0\x9f\x98\x81";
  $emoj2 ="\xF0\x9F\x98\xAC";
  foreach ($weather as $pc) { 
-    $x= $pc["NPA"]." ";
+    $npa= $pc["NPA_HOY"]." ";
+    $npa_avg= $pc["NPA_AVG"]." ";
 }
   $noencontrado=urlencode(" no se encuentra el Nodo: ".$location);
  $msg=urlencode("*Informacion del Nodo* \n").
-      urlencode("Nodo:"  .$location);
+      urlencode("Nodo:"  .$location."\n").
+      urlencode("NPA:"  .$npa."\n").
+      urlencode("NPA (Avg 7 dias):"  .$npa_avg."\n").
+      urlencode("Departamento:"  .$location."\n").
+      urlencode("Ciudad:"  .$location."\n").
+      urlencode("Colonia/Nodo:"  .$location."\n").
+      urlencode("Supervisor:"  .$location."\n").
+      urlencode("CMTS:"  .$location."\n");
  
  
  if (empty($x)) 
