@@ -25,11 +25,11 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
       urlencode("Nodo: "  .$location."\n").
       urlencode("NPA: "  .$npa."\n").
       urlencode("NPA (Avg 7 dias): "  .$npa_avg."\n").
-      urlencode("Departamento: "  .$location."\n").
-      urlencode("Ciudad: "  .$location."\n").
-      urlencode("Colonia/Nodo: "  .$location."\n").
-      urlencode("Supervisor: "  .$location."\n").
-      urlencode("CMTS: "  .$location."\n");
+      urlencode("Departamento: "  .$supervisor."\n").
+      urlencode("Ciudad: "  .$ciudad."\n").
+      urlencode("Colonia/Nodo: "  .$colonia."\n").
+      urlencode("Supervisor: "  .$supervisor."\n").
+      urlencode("CMTS: "  .$cmts."\n");
  
  
  if (empty($x)) 
