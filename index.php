@@ -14,7 +14,9 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
  foreach ($weather as $pc) { 
     $x= $pc["NPA"]." ";
 }
- file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=NODO NO EXISTE ".$location." ES: " );
+  $noencontrado=urlencode(" no se encuentra el Nodo: "." id_nodo:".$location);
+ 
+ file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$noencontrado);
  
 
 }
