@@ -21,7 +21,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
     $cmts= $pc["CMTS"]." ";
 }
   $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
- $msg=urlencode("<pre>Informacion del Nodo</pre> \n").
+ $msg=urlencode("<pre>Informacion del Nodo</pre>").urlencode("\n").
       urlencode("Nodo: "  .$location."\n").
       urlencode("NPA: "  .$x."\n").
       urlencode("NPA (Avg 7 dias): "  .$npa_avg."\n").
