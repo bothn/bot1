@@ -27,7 +27,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
       urlencode("CMTS:"  .$location."\n");
  
  
- if (empty($x)) 
+ if (empty($npa)) 
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$noencontrado.'&parse_mode=markdown'); } 
     else 
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=markdown'); } 
