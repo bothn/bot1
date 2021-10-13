@@ -12,7 +12,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
  $emoji = "\xf0\x9f\x98\x81";
  $emoj2 ="\xF0\x9F\x98\xAC";
  foreach ($weather as $pc) { 
-    $npa= $pc["NPA_HOY"]." ";
+    $x= $pc["NPA_HOY"]." ";
     $npa_avg= $pc["NPA_AVG"]." ";
     $departamento= $pc["DEPARTAMENTO"]." ";
     $ciudad= $pc["CIUDAD"]." ";
@@ -32,7 +32,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
       urlencode("CMTS: "  .$location."\n");
  
  
- if (empty($npa)) 
+ if (empty($x)) 
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$noencontrado.'&parse_mode=markdown'); } 
     else 
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=markdown'); } 
