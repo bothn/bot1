@@ -14,12 +14,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
  foreach ($weather as $pc) { 
     $x= $pc["NPA"]." ";
 }
- $msg=urlencode(" Informacion del Nodo/n"." id_nodo:".$location."ES:". $x.$emoji);
- $ms2 = urlencode("*Informacion del Nodo* \n"."Node_id:"  .$location."NPA:");
-if (empty($x)) 
-  {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=NODO NO EXISTE ".$location." ES: ". $x.$emoj2 );
-  } else {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$ms2.'&parse_mode=markdown' );
-  } 
+ file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=NODO NO EXISTE ".$location." ES: " );
  
 
 }
