@@ -9,8 +9,7 @@ $message = $update["message"]["text"];
 if (strpos($message, '/n') === 0) {
 $location = strtoupper(substr($message, 3));
 $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test.php?nodo=".$location),true);
- $emoji = "\xf0\x9f\x98\x81";
- $emoj2 ="\xF0\x9F\x98\xAC";
+ 
  foreach ($weather as $pc) { 
     $x= $pc["NPA_HOY"]." ";
     $npa_avg= $pc["NPA_AVG"]." ";
@@ -22,13 +21,18 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
 }
  
  if ($x >90 ){$emoji = "\xf0\x9f\x98\x81";}
-  if ($x >85 && $x <90 ){$emoji ="\xF0\x9F\x98\xA2";}
+ if ($x >85 && $x <90 ){$emoji ="\xF0\x9F\x98\xA2";}
  if ($x <=85   ){$emoji ="\xF0\x9F\x98\xA1";}
+ 
+ if ($x >90 ){$emoj2 = "\xF0\x9F\x98\x83";}
+ if ($x >85 && $x <90 ){$emoj2 ="\xF0\x9F\x98\xA2";}
+ if ($x <=85   ){$emoj2 ="\xF0\x9F\x98\xAD";}
+ 
   $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
  $msg=urlencode("<b><pre>Informacion del Nodo</pre></b>").urlencode("\n").
       urlencode("<pre>Nodo: "  .$location."</pre>").urlencode("\n").
       urlencode("<pre>NPA: "  .$x."</pre>").$emoji.urlencode("\n").
-      urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."</pre>").urlencode("\n").
+      urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."</pre>").$emoj2.urlencode("\n").
       urlencode("<pre>Departamento: "  .$supervisor."</pre>").urlencode("\n").
       urlencode("<pre>Ciudad:       "  .$ciudad."</pre>").urlencode("\n").
       urlencode("<pre>Colonia/Nodo: "  .$colonia."</pre>").urlencode("\n").
