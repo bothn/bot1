@@ -56,9 +56,16 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supe
  
  
  
- $msg=urlencode("<pre> | Tables | Are | Cool | |----------|:-------------:|------:| | col 1 is | left-aligned | $1600 | | col 2 is | centered | $12 | | col 3 is | right-aligned | $1 | </pre>").urlencode("\n");
+ $msg=urlencode("<pre>| SUPERVISOR | NPA |  
+|--------|-------|--------| </pre>").urlencode("\n");
 
+    foreach ($weather as $pc) { 
  
+ 
+  
+    $msg .= urlencode("<pre>".$pc["NPA"]."=>".$pc["NOMBRE"]."</pre>").urlencode("\n");
+ 
+ } 
  
  
      file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=html');  
