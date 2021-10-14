@@ -20,15 +20,17 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
     $supervisor= $pc["SUPERVISOR"]." ";
     $cmts= $pc["CMTS"]." ";
 }
+ 
+ if ($x >90 ){$emoji = "\xf0\x9f\x98\x81";}
   $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
  $msg=urlencode("<b><pre>Informacion del Nodo</pre></b>").urlencode("\n").
       urlencode("<pre>Nodo: "  .$location."</pre>").urlencode("\n").
-      urlencode("<pre>NPA: "  .$x."</pre>").urlencode("\n").
+      urlencode("<pre>NPA: "  .$x."</pre>").$emoji1.urlencode("\n").
       urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."</pre>").urlencode("\n").
       urlencode("<pre>Departamento: "  .$supervisor."</pre>").urlencode("\n").
       urlencode("<pre>Ciudad:       "  .$ciudad."</pre>").urlencode("\n").
       urlencode("<pre>Colonia/Nodo: "  .$colonia."</pre>").urlencode("\n").
-      urlencode("<pre>Supervisor:    "  .$supervisor."</pre>").urlencode("\n").
+      urlencode("<pre>Supervisor:   "  .$supervisor."</pre>").urlencode("\n").
       urlencode("<pre>CMTS: "  .$cmts."</pre>");
  
  
