@@ -25,7 +25,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
   $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
  $msg=urlencode("<b><pre>Informacion del Nodo</pre></b>").urlencode("\n").
       urlencode("<pre>Nodo: "  .$location."</pre>").urlencode("\n").
-      urlencode("<pre>NPA: "  .$x."</pre>").$emoji1.urlencode("\n").
+      urlencode("<pre>NPA: "  .$x."</pre>").$emoji.urlencode("\n").
       urlencode("<pre>NPA (Avg 7 dias): "  .$npa_avg."</pre>").urlencode("\n").
       urlencode("<pre>Departamento: "  .$supervisor."</pre>").urlencode("\n").
       urlencode("<pre>Ciudad:       "  .$ciudad."</pre>").urlencode("\n").
