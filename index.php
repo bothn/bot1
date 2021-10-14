@@ -46,8 +46,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
     {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=html'); } 
 }
 
-/*codigo para resultado supervisores
-*/
+ 
 
 if (strpos($message, '/s') === 0) {
 $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supervisor.php"),true);
@@ -66,15 +65,15 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supe
  if ($x >85 && $x <90 ){$emoj2 ="\xF0\x9F\x98\xA2";}
  if ($x <=85   ){$emoj2 ="\xF0\x9F\x98\xAD";}
  
-  $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
+ 
  $msg=urlencode("<pre> | Tables | Are | Cool | |----------|:-------------:|------:| | col 1 is | left-aligned | $1600 | | col 2 is | centered | $12 | | col 3 is | right-aligned | $1 | </pre>").urlencode("\n").
       urlencode("<pre>Nodo: "  .$nombre."</pre>").urlencode("\n").
       urlencode("<pre>NPA: "  .$x."</pre>").$emoji.urlencode("\n") ;
  
  
- if (empty($x)) 
-    else 
-    {file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=html'); } 
+ 
+ 
+     file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=html');  
 }
 
 
