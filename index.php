@@ -22,6 +22,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
 }
  
  if ($x >90 ){$emoji = "\xf0\x9f\x98\x81";}
+  if ($x >85 && $x <90 ){$emoji ="\xF0\x9F\x98\xAC";}
   $noencontrado=urlencode(" <pre>no se encuentra el Nodo: ".$location."</pre>");
  $msg=urlencode("<b><pre>Informacion del Nodo</pre></b>").urlencode("\n").
       urlencode("<pre>Nodo: "  .$location."</pre>").urlencode("\n").
