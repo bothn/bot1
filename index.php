@@ -51,19 +51,9 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
 if (strpos($message, '/s') === 0) {
 $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supervisor.php"),true);
  
- foreach ($weather as $pc) { 
-    $x= $pc["NPA"]." ";
-    $nombre= $pc["NOMBRE"]." ";
  
-}
  
- if ($x >90 ){$emoji = "\xf0\x9f\x98\x81";}
- if ($x >85 && $x <90 ){$emoji ="\xF0\x9F\x98\xA2";}
- if ($x <=85   ){$emoji ="\xF0\x9F\x98\xA1";}
  
- if ($x >90 ){$emoj2 = "\xF0\x9F\x98\x83";}
- if ($x >85 && $x <90 ){$emoj2 ="\xF0\x9F\x98\xA2";}
- if ($x <=85   ){$emoj2 ="\xF0\x9F\x98\xAD";}
  
  
  $msg=urlencode("<pre> | Tables | Are | Cool | |----------|:-------------:|------:| | col 1 is | left-aligned | $1600 | | col 2 is | centered | $12 | | col 3 is | right-aligned | $1 | </pre>").urlencode("\n")
