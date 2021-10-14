@@ -71,10 +71,10 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supe
  
  
   
-  urlencode("<pre>Nodo: "  .$pc["NPA"]."</pre>").urlencode("\n").
-      urlencode("<pre>NPA: "  .$pc["NOMBRE"]."</pre>").$emoji.urlencode("\n") ;
+      urlencode("<pre>Nodo: "  .$pc["NPA"]."</pre>").urlencode("\n").
+      urlencode("<pre>NPA: "  .$pc["NOMBRE"]."</pre>").$emoji
  } 
- 
+ .urlencode("\n") ;
  
  
      file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=".$msg.'&parse_mode=html');  
