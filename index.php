@@ -61,8 +61,8 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supe
 
     foreach ($weather as $pc) { 
   $x= $pc["NPA"];
-  if ($x>=99 ){$emoj2 = "\xF0\x9F\x98\x83";} 
- if ($x <=95 ){$emoj2 ="\xF0\x9F\x90\xA2";}
+  if ($x <= 99 ){$emoj2 = "\xF0\x9F\x98\x83";} 
+ if (98 >= $x ){$emoj2 ="\xF0\x9F\x90\xA2";}
   
     $msg .= urlencode("<pre> ".$pc["NOMBRE"]." => ".$pc["NPA"]."</pre>")." ".$emoj2.urlencode("\n");
  
