@@ -61,8 +61,8 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supe
  
  
   
-    $msg= .+urlencode("<pre>Nodo: "  .$pc["NPA"]."</pre>").urlencode("\n");
-     $msg= .+urlencode("<pre>NPA: "  .$pc["NOMBRE"]."</pre>").$emoji.urlencode("\n") ;
+    $msg .= urlencode("<pre>Nodo: "  .$pc["NPA"]."</pre>").urlencode("\n").
+      urlencode("<pre>NPA: "  .$pc["NOMBRE"]."</pre>").$emoji.urlencode("\n") ;
  } 
  
  
