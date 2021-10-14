@@ -28,8 +28,8 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
       urlencode("<pre>Departamento: "  .$supervisor."</pre>").urlencode("\n").
       urlencode("<pre>Ciudad:       "  .$ciudad."</pre>").urlencode("\n").
       urlencode("<pre>Colonia/Nodo: "  .$colonia."</pre>").urlencode("\n").
-      urlencode("<pre>Supervisor:   "  .$supervisor."</pre>").urlencode("\n").
-      urlencode("<pre>CMTS:         "  .$cmts."</pre>");
+      urlencode("<pre>Supervisor:    "  .$supervisor."</pre>").urlencode("\n").
+      urlencode("<pre>CMTS: "  .$cmts."</pre>");
  
  
  if (empty($x)) 
