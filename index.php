@@ -57,7 +57,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supe
  
  
  $msg=urlencode("<pre>| SUPERVISOR | NPA |  
-|--------|-------|--------| </pre>").urlencode("\n");
+|------------|------- </pre>").urlencode("\n");
 
     foreach ($weather as $pc) { 
  
