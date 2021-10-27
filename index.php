@@ -6,7 +6,7 @@ $update = json_decode(file_get_contents("php://input"), TRUE);
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
 
-if (strpos($message, '/n') === 0) {
+if (strpos($message, '/x') === 0) {
 $location = strtoupper(substr($message, 3));
 $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test.php?nodo=".$location),true);
  
