@@ -48,7 +48,7 @@ $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/test
 
  
 
-if (strpos($message, '/s') === 0) {
+if (strpos($message, '/xs') === 0) {
 $weather = json_decode(file_get_contents ("http://190.4.63.192/reportes/bot/supervisor.php"),true);
  
  
